@@ -1,3 +1,9 @@
+/* Sem contorno, uma sombrinha muito leve destaca o bichinho de qualquer
+   fundo — clarinho ou escuro — sem virar linha. */
+.mascot {
+  filter: drop-shadow(0 1px 1.5px rgba(86, 60, 44, 0.16));
+}
+
 .mascot {
   overflow: visible;
   display: block;

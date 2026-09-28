@@ -541,7 +541,8 @@ summary:focus-visible {
 
 .friends {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* São seis: três por linha fecham duas filas iguais. */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 .friend {
