@@ -18,3 +18,90 @@
   background: var(--tint-soft, var(--accent-soft));
   flex-shrink: 0;
 }
+
+/* ─── Biblioteca de figurinhas ───────────────────────────────────────────── */
+
+.icon-picker {
+  position: relative;
+  flex-shrink: 0;
+}
+.icon-picker__trigger {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 40px;
+  border-radius: var(--radius-sm, 10px);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+.icon-picker__trigger:hover {
+  border-color: var(--accent);
+}
+.icon-picker__panel {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 6px);
+  left: 0;
+  /* Nunca mais largo que a janela, para caber também nas telas pequenas. */
+  width: min(292px, calc(100vw - 32px));
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+.icon-picker__search {
+  width: 100%;
+  padding: 7px 10px;
+  margin-bottom: 8px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+}
+.icon-picker__scroll {
+  max-height: 248px;
+  overflow-y: auto;
+}
+.icon-picker__scroll h4 {
+  margin: 8px 2px 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.icon-picker__scroll section:first-child h4 {
+  margin-top: 0;
+}
+.icon-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(38px, 1fr));
+  gap: 4px;
+}
+.icon-picker__item {
+  display: grid;
+  place-items: center;
+  height: 38px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+.icon-picker__item:hover {
+  background: var(--accent-soft);
+}
+.icon-picker__item[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.icon-picker__vazio {
+  margin: 10px 2px;
+  font-size: 12.5px;
+  color: var(--text-3);
+}
